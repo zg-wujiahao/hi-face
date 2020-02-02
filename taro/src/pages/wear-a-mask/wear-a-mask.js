@@ -245,7 +245,7 @@ class Index extends Component {
     pc.rotate((rotate * Math.PI) / 180);
 
     try {
-      let maskSrc = await getImg(Mask1Image)
+      let maskSrc = await getImg(require('../../images/mask-1.png'))
       console.log('maskSrc :', maskSrc);
       
       if (maskSrc) {
