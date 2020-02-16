@@ -5,6 +5,7 @@ module.exports = {
   projectname: APPID_ENV ? 'goddess-hat-test' : 'goddess-hat',
   description: 'taro-daka',
   appid: APPID_ENV ? 'wx38b49882b7761548' : 'wxd5e8989ce23206af',
+  qqappid: '1110180763',
   setting: {
     urlCheck: false,
     es6: false,

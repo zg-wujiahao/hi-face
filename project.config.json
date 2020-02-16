@@ -1,9 +1,10 @@
 {
 	"miniprogramRoot": "taro/dist/",
 	"cloudfunctionRoot": "cloud/functions/",
-	"projectname": "tencent-test-1-demo",
+	"projectname": "goddess-hat-v2",
 	"description": "test",
 	"appid": "wxd5e8989ce23206af",
+	"qqappid": "1110180763",
 	"setting": {
 		"urlCheck": false,
 		"es6": false,
