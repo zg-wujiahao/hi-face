@@ -1,0 +1,8 @@
+{
+  "cloud": {
+    "type": "miniappServerless",
+    "root": "server2/functions/"
+  },
+  "miniprogramRoot": "taro/dist/",
+  "cloudfunctionRoot": "server2/functions/"
+}
