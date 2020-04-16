@@ -183,7 +183,7 @@ class QueenKing extends Component {
         cloudPath: `${prefix}-${Date.now()}-${Math.floor(Math.random(0, 1) * 10000000)}.jpg`, // 随机图片名
         filePath: tempFilePath,
       }
-      if (isH5Page) {
+      if (isH5Page || isQQPage) {
         const { fileID } = await Taro.cloud.uploadFile(uploadParams)
         return fileID
       }

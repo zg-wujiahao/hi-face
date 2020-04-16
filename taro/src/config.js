@@ -1,5 +1,5 @@
 const env = process.env.SERVER_ENV || 'prod'
-const appId = 'wxd5e8989ce23206af'
+const appId = '1110180763' // qq的临时用用
 
 module.exports = {
   env,

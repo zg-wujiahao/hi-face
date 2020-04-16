@@ -9,6 +9,8 @@ import { PAGE_DPR_RATIO, GENDER_STATUS, EXPRESS_MOOD, HAVE_STATUS, STATUS_BAR_HE
 // import { TaroCanvasDrawer,  } from 'components/taro-plugin-canvas';
 
 const isH5Page = process.env.TARO_ENV === 'h5'
+const isQqPage = process.env.TARO_ENV === 'qq'
+const isJdPage = process.env.TARO_ENV === 'jd'
 
 import './styles.styl';
 
@@ -60,6 +62,8 @@ class FaceLove extends Component {
     })
 
     let originSrc = tempFilePaths[0]
+
+    console.log('originSrc :', originSrc);
     
     Taro.showLoading({
       title: '识别中...'
@@ -67,6 +71,8 @@ class FaceLove extends Component {
 
     try {
       const fileID = await this.onUploadFile(originSrc)
+
+      console.log('fileID :', fileID);
   
       const { faceFileID, faceImageUrl, FaceInfos = [] } = await cloudCallFunction({
         name: 'detect-face',
@@ -184,8 +190,16 @@ class FaceLove extends Component {
         cloudPath: `${prefix}/${Date.now()}-${Math.floor(Math.random(0, 1) * 10000000)}.jpg`, // 随机图片名
         filePath: tempFilePath,
       }
-      if (isH5Page) {
-        const { fileID } = await Taro.cloud.uploadFile(uploadParams)
+
+
+      console.log('isJdPage :', isJdPage);
+      if (isH5Page || isQqPage || isJdPage) {
+        console.log('isJdPage2', isJdPage)
+        const { fileID } = await Taro.cloud.uploadFile(uploadParams).then((res) => {
+          console.log('res :', res);
+        })
+
+        console.log('fileID :', fileID);
         return fileID
       }
       const uploadFile = promisify(Taro.cloud.uploadFile)

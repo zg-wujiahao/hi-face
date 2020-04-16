@@ -1,7 +1,8 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
-import tcb from 'tcb-js-sdk'
-import adapterForQQ from '@cloudbase/adapter-qq_mp';
+import tcb from 'tcb-js-sdk-lite'
+import adapterForQQ from 'utils/cloudbase/adapter-qq_mp';
+import adapterForJD from 'utils/cloudbase/adapter-jd_mp';
 
 import Index from './pages/test/test'
 import store from '@/store'
@@ -23,13 +24,13 @@ class App extends Component {
   config = {
     pages: [
       'pages/face-love/face-love',
-      'pages/queen-king/queen-king',
-      'pages/wear-a-mask/wear-a-mask',
-      'pages/self/self',
-      'pages/test/test',
+      // 'pages/queen-king/queen-king',
+      // 'pages/wear-a-mask/wear-a-mask',
+      // 'pages/self/self',
+      // 'pages/test/test',
       'pages/thanks/thanks',
-      'pages/my-avatars/my-avatars',
-      'pages/avatar-poster/avatar-poster',
+      // 'pages/my-avatars/my-avatars',
+      // 'pages/avatar-poster/avatar-poster',
       // 'pages/spread-game/spread-game',
     ],
     window: {
@@ -48,12 +49,12 @@ class App extends Component {
       color: '#95a1af',
       selectedColor: '#2f5aff',
       list: [
-        {
-          pagePath: 'pages/queen-king/queen-king',
-          text: '女王节',
-          iconPath: 'images/tab-bar-crown.png',
-          selectedIconPath: 'images/tab-bar-crown-active.png'
-        },
+        // {
+        //   pagePath: 'pages/queen-king/queen-king',
+        //   text: '女王节',
+        //   iconPath: 'images/tab-bar-crown.png',
+        //   selectedIconPath: 'images/tab-bar-crown-active.png'
+        // },
         {
           pagePath: 'pages/face-love/face-love',
           text: '人像魅力',
@@ -85,15 +86,17 @@ class App extends Component {
 
   componentWillMount() {
 
+    console.log('process.env.TARO_ENV :', process.env.TARO_ENV);
     if (process.env.TARO_ENV === 'weapp') {
       Taro.cloud.init({
         env: config.cloudEnv,
         traceUser: true
       })
-    } else if (process.env.TARO_ENV === 'h5' || process.env.TARO_ENV === 'qq') {
-      console.log('tcb :', tcb, process.env.TARO_ENV );
+    } else if (process.env.TARO_ENV === 'h5' || process.env.TARO_ENV === 'qq' || process.env.TARO_ENV === 'jd') {
       let initConfig = {}
-      tcb.useAdapters([adapterForQQ]);
+      // tcb.useAdapters([adapterForQQ, adapterForJD]);
+      tcb.useAdapters(adapterForJD);
+      console.log('tcb 2:', tcb, process.env.TARO_ENV );
       initConfig = {
         appSign: process.env.appSign,
         appSecret: {
@@ -107,18 +110,20 @@ class App extends Component {
         ...initConfig
       })
       // console.log('登录云开发成功！')
-      Taro.cloud.auth().signInAnonymously().then(() => {
-        Taro.cloud.callFunction({
-          name: 'thanks-data',
-          data: {
-            1: 1
-          }
-        }).then(res => console.log('res ', res))
+      const loginState = Taro.cloud.auth().hasLoginState();
+      console.log('loginState :', loginState);
+      // Taro.cloud.auth().signInAnonymously().then(() => {
+      //   Taro.cloud.callFunction({
+      //     name: 'thanks-data',
+      //     data: {
+      //       1: 1
+      //     }
+      //   }).then(res => console.log('res ', res))
 
 
-      }).catch(error => {
-        console.log('error :', error);
-      })
+      // }).catch(error => {
+      //   console.log('error :', error);
+      // })
     }
     
     this.onUserLogin()
