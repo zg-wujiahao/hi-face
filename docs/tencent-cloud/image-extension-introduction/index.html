@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>多种云开发扩展能力，让人脸识别飞起来 · 头像小册</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="最近，腾讯云云开发增加了几项非常实用的[扩展能力](https://console.cloud.tencent.com/tcb/add)，包含图像标签、图像安全审核、图像处理、图片盲水印。"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="多种云开发扩展能力，让人脸识别飞起来 · 头像小册"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hi-our.github.io/hi-face/"/><meta property="og:description" content="最近，腾讯云云开发增加了几项非常实用的[扩展能力](https://console.cloud.tencent.com/tcb/add)，包含图像标签、图像安全审核、图像处理、图片盲水印。"/><meta property="og:image" content="https://hi-our.github.io/hi-face/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hi-our.github.io/hi-face/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="头像小册"/><h2 class="headerTitleWithLogo">头像小册</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction" target="_self">小册</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>腾讯云开发实战</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">介绍</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">开篇介绍</a></li><li class="navListItem"><a class="navItem" href="/docs/book-plan">产品需求设计、项目规划、UI设计的技巧</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">配置</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/config/taro-cloud-function">项目搭建-Taro小程序开启云开发模式</a></li><li class="navListItem"><a class="navItem" href="/docs/config/tencent-cloud-ai-face">项目搭建-腾讯云环境配置及特色人工功能介绍</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">小程序知识</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-image-cropper-share">图片裁剪、模糊、保存、分享的技巧</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-minapp-web">canvas在小程序与web端的不同</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/minapp-to-dark-mode">深色模式在Web端的适配技巧，附带小程序侧的思考</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">原生小程序实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-native/face-recognition">原生微信小程序实现人脸识别</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/sticker">原生微信小程序实现头像大头贴效果</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/wear-a-mask">原生小程序实现戴口罩或圣诞帽</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">腾讯云开发实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-speed-up-1-second">图片识别加速，从10秒变为1秒，是怎么做到的呢？</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-minapp-to-web">简单几步，让微信小程序变身 H5 网页</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/tencent-cloud/image-extension-introduction">多种云开发扩展能力，让人脸识别飞起来</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-recognition-storage">借助云存储，让大图识别转换真正加速</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/avatar-poster-share">海报分享页面的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/login-minapp-web">小程序与Web端的账户体系摸索</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/self-page-list">个人中心的制作，包含登录组件的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-image-services">腾讯云功能</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Taro实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/taro-next/taro-next-vs-core">小程序框架：Taro 2.0与Taro 3.0的核心分析</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">多种云开发扩展能力，让人脸识别飞起来</h1></header><article><div><span><p>最近，腾讯云云开发增加了几项非常实用的<a href="https://console.cloud.tencent.com/tcb/add">扩展能力</a>，包含图像标签、图像安全审核、图像处理、图片盲水印。</p>
+<p>本次，我就将借助云开发扩展能力来完成人脸识别的小程序。</p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/12/9cd41ecbf9d287661512af1060bf2039.jpg" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="人脸识别"></a><a href="#人脸识别" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>人脸识别</h2>
+<p>借助图像处理来优化人脸识别流程。</p>
+<!-- 缺少一个流程图 -->
+* 选择图片
+* 上传到云存储
+* 云开发
+  * 图片：缩放、人脸智能裁剪
+  * 图像安全审核（后文中介绍）
+  * 腾讯云-人脸识别
+* 返回到小程序上进行显示
+  * 显示裁剪后的图片
+  * 显示人脸魅力框
+<p>云函数超时时间调整为15秒</p>
+<h3><a class="anchor" aria-hidden="true" id="图像缩放及裁剪"></a><a href="#图像缩放及裁剪" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像缩放及裁剪</h3>
+<p>图像缩放及裁剪，有两种方法进行，一种是小程序侧借助图片裁剪插件让用户自己手动裁剪，而另一种就是今天介绍的基于云开发扩展能力的<a href="https://cloud.tencent.com/document/product/876/42103#.E4.BD.BF.E7.94.A8.E6.89.A9.E5.B1.95">图像处理</a>来自动完成图片裁剪。</p>
+<p>如，原图为2160x2880的1Mb大小的图片，而在小程序显示时只需要宽高为600x600的图片即可（图片大小会降为70Kb）。</p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/12/56ed9b6e34415129deefc3ba6463c865.jpg" alt=""></p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// 获取图片临时链接</span>
+<span class="hljs-keyword">const</span> getImageUrl = <span class="hljs-keyword">async</span> (fileID) =&gt; {
+  <span class="hljs-keyword">const</span> { fileList } = <span class="hljs-keyword">await</span> tcb.getTempFileURL({
+    <span class="hljs-attr">fileList</span>: [fileID]
+  })
+  <span class="hljs-keyword">return</span> fileList[<span class="hljs-number">0</span>].tempFileURL
+}
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">let</span> originImageUrl = <span class="hljs-keyword">await</span> getImageUrl(fileID)
+
+<span class="hljs-keyword">let</span> rule = <span class="hljs-string">`imageMogr2/thumbnail/!<span class="hljs-subst">${width}</span>x<span class="hljs-subst">${height}</span>r|imageMogr2/scrop/<span class="hljs-subst">${width}</span>x<span class="hljs-subst">${height}</span>/`</span>
+
+<span class="hljs-keyword">let</span> cutImageUrl = originImageUrl + <span class="hljs-string">'?'</span> + rule
+
+<span class="hljs-keyword">return</span> cutImageUrl
+    
+</code></pre>
+<p>图片缩放及裁剪的核心就是<code>rule</code>，这里我执行了两项操作</p>
+<ol>
+<li><code>/thumbnail/!600x600r/</code>，将图片缩放为宽高中的小边为600px（<code>限定缩略图的宽度和高度的最小值分别为 Width 和 Height，进行等比缩放</code>）</li>
+<li><code>/scrop/600x600</code>，将图片的人脸部分裁剪出来（<code>基于图片中的人脸位置进行缩放裁剪。目标图片的宽度为 Width、高度为 Height</code>）</li>
+</ol>
+<blockquote>
+<p>如果人脸智能裁剪不奏效的话，也可以用<code>/crop/600x600/center</code>，将图片居中裁剪。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="人脸识别-1"></a><a href="#人脸识别-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>人脸识别</h3>
+<p>腾讯云的<a href="https://cloud.tencent.com/document/api/867/32800">人脸识别</a>服务支持使用图片链接（<code>Url</code>）或者图片base64数据（<code>Image</code>）来完成人脸识别。</p>
+<p>这里，我通过 fileID 获取图片临时链接，以提供给人脸识别使用。</p>
+<p><img src="https://n1other.hjfile.cn/res7/2020/04/12/ae020750c69cc3c4938542ea98d64e48.PNG" alt=""></p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// 人脸识别示例代码</span>
+<span class="hljs-keyword">const</span> detectFace = <span class="hljs-function">(<span class="hljs-params">Image</span>) =&gt;</span> {
+
+  <span class="hljs-keyword">let</span> faceReq = <span class="hljs-keyword">new</span> models.DetectFaceRequest()
+
+  <span class="hljs-comment">// 支持图片链接或图片base64数据</span>
+  <span class="hljs-keyword">let</span> query_string = <span class="hljs-built_in">JSON</span>.stringify(Image.includes(<span class="hljs-string">'http'</span>) ? {
+    <span class="hljs-attr">Url</span>: Image,
+    <span class="hljs-attr">MaxFaceNum</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">NeedFaceAttributes</span>: <span class="hljs-number">1</span>
+  } : {
+      Image,
+      <span class="hljs-attr">MaxFaceNum</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">NeedFaceAttributes</span>: <span class="hljs-number">1</span>
+    })
+  
+  <span class="hljs-comment">// 传入json参数</span>
+  faceReq.from_json_string(query_string);
+
+  <span class="hljs-comment">// 进行人脸识别</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    <span class="hljs-comment">// 通过client对象调用想要访问的接口，需要传入请求对象以及响应回调函数</span>
+    client.DetectFace(faceReq, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error, response</span>) </span>{
+      <span class="hljs-comment">// 请求异常返回，打印异常信息</span>
+      <span class="hljs-keyword">if</span> (error) {
+        <span class="hljs-keyword">const</span> { code = <span class="hljs-string">''</span> } = error
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'code :'</span>, code);
+
+        resolve({
+          <span class="hljs-attr">data</span>: {},
+          <span class="hljs-attr">time</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+          <span class="hljs-attr">status</span>: <span class="hljs-number">-10086</span>,
+          <span class="hljs-attr">message</span>: <span class="hljs-string">'DetectFace '</span> + status.DETECT_CODE[code] || code || <span class="hljs-string">'图片解析失败'</span>
+        })
+        <span class="hljs-keyword">return</span>
+      }
+      <span class="hljs-comment">// 请求正常返回，打印response对象</span>
+      resolve({
+        <span class="hljs-attr">data</span>: response,
+        <span class="hljs-attr">time</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">status</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">message</span>: <span class="hljs-string">''</span>
+      })
+    })
+  });
+}
+</code></pre>
+<p><strong>注意点</strong></p>
+<blockquote>
+<p>接口文档：最多返回面积最大的 5 张人脸属性信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceAttributesInfo 不具备参考意义。</p>
+</blockquote>
+<ul>
+<li><code>MaxFaceNum</code>：最大识别人数建议限定为5个</li>
+<li><code>NeedFaceAttributes</code>：设置为1时，才会返回人脸属性值（魅力值）</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="图像安全审核"></a><a href="#图像安全审核" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像安全审核</h2>
+<blockquote>
+<p>图像安全审核提供鉴黄、鉴政、鉴暴恐等多种类型的敏感内容审核服务，有效识别违禁图片，规避违规风险。</p>
+</blockquote>
+<p>我们这里对比了云开发扩展能力的<code>图片安全审核</code>与开放能力的<code>图片安全审核</code>的差异。</p>
+<table>
+<thead>
+<tr><th style="text-align:left">名称</th><th style="text-align:center">额度</th><th style="text-align:center">数据类型</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">图片安全审核<br />云开发扩展能力</td><td style="text-align:center">2000张/日</td><td style="text-align:center">云存储fileId中图片绝对地址</td></tr>
+<tr><td style="text-align:left">imgSecCheck<br />开放能力</td><td style="text-align:center">免费</td><td style="text-align:center">Buffer</td></tr>
+</tbody>
+</table>
+<p><strong>图片安全审核，来自云开发扩展能力</strong></p>
+<p>接口文档：<a href="https://cloud.tencent.com/document/product/876/42096#.E4.BD.BF.E7.94.A8.E6.89.A9.E5.B1.95">https://cloud.tencent.com/document/product/876/42096#.E4.BD.BF.E7.94.A8.E6.89.A9.E5.B1.95</a></p>
+<p><strong>使用步骤：</strong></p>
+<ol>
+<li>上传图片到云存储</li>
+<li>云函数调用<code>图片安全审核，来自云开发扩展能力</code>进行校验</li>
+<li>如果是违规图片，可能还需要从云存储上删除，以免占用不必要的空间</li>
+</ol>
+<p><strong>开放能力 imgSecCheck</strong></p>
+<p>接口文档 <a href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/sec-check/security.imgSecCheck.html">https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/sec-check/security.imgSecCheck.html</a></p>
+<p>在实际使用中发现的大问题，图片Buffer大小超过100k，可能就报图片太大的错误了。有的小伙伴说，10k都可能会报错。</p>
+<h3><a class="anchor" aria-hidden="true" id="使用方法"></a><a href="#使用方法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用方法</h3>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">demo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> opts = {
+      <span class="hljs-attr">type</span>: [<span class="hljs-string">"porn"</span>, <span class="hljs-string">"terrorist"</span>, <span class="hljs-string">"politics"</span>]
+    }
+    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> tcb.invokeExtension(<span class="hljs-string">'CloudInfinite'</span>,{
+      <span class="hljs-attr">action</span>:<span class="hljs-string">'DetectType'</span>,
+      <span class="hljs-attr">cloudPath</span>: <span class="hljs-string">"ab.png"</span>, <span class="hljs-comment">// 需要分析的图像的绝对路径，与tcb.uploadFile中一致</span>
+      <span class="hljs-attr">operations</span>: opts
+    })
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(res.data, <span class="hljs-literal">null</span>, <span class="hljs-number">4</span>));
+  } <span class="hljs-keyword">catch</span> (err) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(err, <span class="hljs-literal">null</span>, <span class="hljs-number">4</span>));
+  }
+}
+</code></pre>
+<p>完整的使用示例，请参照 <a href="https://github.com/hi-our/hi-face/blob/master/cloud/functions/image-safe-check/index.js">https://github.com/hi-our/hi-face/blob/master/cloud/functions/image-safe-check/index.js</a></p>
+<h2><a class="anchor" aria-hidden="true" id="多图裁剪"></a><a href="#多图裁剪" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>多图裁剪</h2>
+<blockquote>
+<p>需要补充多图裁剪的功能</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="图片主色调"></a><a href="#图片主色调" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图片主色调</h2>
+<p>在<code>图像处理</code>中其实有一项十分好用的功能，那就是获取图片主色调，这个能力是基于云存储的数据万象来做的。</p>
+<p><img src="https://n1other.hjfile.cn/res7/2020/04/12/969c1959a0b48b23f202b70235dda365.JPG" alt=""></p>
+<p>其实用方法为将云存储的图片链接后拼接<code>?imageAve</code>。而我这里还打算将颜色转换放在里面，因为可能需要的颜色是带透明度的RGBA颜色。</p>
+<pre><code class="hljs css language-js">exports.main = <span class="hljs-keyword">async</span> (event) =&gt; {
+  <span class="hljs-keyword">const</span> { fileID = <span class="hljs-string">''</span>, opacity = <span class="hljs-number">1</span>, colorType = <span class="hljs-string">'default'</span> } = event
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'fileID :'</span>, fileID);
+
+  <span class="hljs-keyword">if</span> (fileID) {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">const</span> imgUrl = <span class="hljs-keyword">await</span> getImageUrl(fileID)
+
+      <span class="hljs-comment">// 云存储的图片临时链接拼接`?imageAve`</span>
+      <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetch.get(imgUrl + <span class="hljs-string">'?imageAve'</span>)
+      <span class="hljs-keyword">const</span> { RGB } = getResCode(res)
+  
+      <span class="hljs-keyword">const</span> colorHex = <span class="hljs-string">'#'</span> + RGB.substring(<span class="hljs-number">2</span>)
+      <span class="hljs-keyword">const</span> colorRgbaObj = hexToRgba(colorHex, opacity)
+      <span class="hljs-keyword">const</span> colorRgba = colorRgbaObj.rgba
+      <span class="hljs-keyword">const</span> colorRgb = <span class="hljs-string">`rgb(<span class="hljs-subst">${colorRgbaObj.red}</span>, <span class="hljs-subst">${colorRgbaObj.green}</span>, <span class="hljs-subst">${colorRgbaObj.blue}</span>)`</span>
+  
+      <span class="hljs-comment">// 支持多种颜色获取方式</span>
+      <span class="hljs-keyword">let</span> mainColor = opacity === <span class="hljs-number">1</span> ? colorHex : colorRgba
+      <span class="hljs-keyword">if</span> (colorType === <span class="hljs-string">'hex'</span>) {
+        mainColor = colorHex
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (colorType === <span class="hljs-string">'rgb'</span>) {
+        mainColor = colorRgb
+      }
+
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">data</span>: {
+          mainColor
+        },
+        <span class="hljs-attr">time</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">status</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">message</span>: <span class="hljs-string">''</span>
+      }
+      
+    } <span class="hljs-keyword">catch</span> (error) {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">data</span>: {},
+        <span class="hljs-attr">time</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">status</span>: <span class="hljs-number">-10087</span>,
+        <span class="hljs-attr">message</span>: <span class="hljs-built_in">JSON</span>.stringify(error)
+      }
+    }
+
+  }
+
+  <span class="hljs-keyword">let</span> errorString = <span class="hljs-string">'请设置 fileID'</span>
+  <span class="hljs-built_in">console</span>.log(errorString)
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">data</span>: {},
+    <span class="hljs-attr">time</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+    <span class="hljs-attr">status</span>: <span class="hljs-number">-10086</span>,
+    <span class="hljs-attr">message</span>: errorString
+  }
+}
+</code></pre>
+<p>完整的使用示例，请参照 <a href="https://github.com/hi-our/hi-face/blob/master/cloud/functions/get-main-color/index.js">https://github.com/hi-our/hi-face/blob/master/cloud/functions/get-main-color/index.js</a></p>
+<h2><a class="anchor" aria-hidden="true" id="图像标签"></a><a href="#图像标签" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像标签</h2>
+<blockquote>
+<p>图像标签对云存储中存量数据的图片标签识别，返回图片中置信度较高的主题标签，帮助开发者分析图像。</p>
+</blockquote>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/12/9cd41ecbf9d287661512af1060bf2039.jpg" alt=""></p>
+<blockquote>
+<p>上图中，人体、婚纱等文字就是图像标签。</p>
+</blockquote>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">let</span> imgID = fileID.replace(<span class="hljs-string">'cloud://'</span>, <span class="hljs-string">''</span>)
+<span class="hljs-keyword">let</span> index = <span class="hljs-keyword">let</span> .indexOf(<span class="hljs-string">'/'</span>)
+<span class="hljs-keyword">let</span> cloudPath = imgID.substr(index)
+
+<span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> tcb.invokeExtension(<span class="hljs-string">"CloudInfinite"</span>, {
+  <span class="hljs-attr">action</span>: <span class="hljs-string">"DetectLabel"</span>,
+  <span class="hljs-attr">cloudPath</span>: cloudPath <span class="hljs-comment">// 需要分析的图像的绝对路径，与tcb.uploadFile中一致</span>
+})
+
+<span class="hljs-keyword">const</span> { Labels } = getResCode(res)
+<span class="hljs-comment">// 兼容只有标签时为对象的情况</span>
+<span class="hljs-keyword">const</span> tmpLabels = Labels.length &gt; <span class="hljs-number">1</span> ? Labels : [Labels]
+
+<span class="hljs-keyword">const</span> list = tmpLabels.map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> ({
+  <span class="hljs-attr">confidence</span>: item.Confidence,
+  <span class="hljs-attr">name</span>: item.Name
+}))
+</code></pre>
+<p>完整的使用示例，请参照 <a href="https://github.com/hi-our/hi-face/blob/master/cloud/functions/get-main-color/index.js">https://github.com/hi-our/hi-face/blob/master/cloud/functions/get-main-color/index.js</a></p>
+<h2><a class="anchor" aria-hidden="true" id="文章相关内容："></a><a href="#文章相关内容：" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>文章相关内容：</h2>
+<p>我是 <strong>盛瀚钦</strong>，沪江 CCtalk 前端开发工程师，Taro 框架的 issue 维护志愿者，腾讯云云开发布道师，主要侧重于前端 UI 编写和团队文档建设</p>
+<p>源码地址：
+<a href="https://github.com/hi-our/hi-face" title="https://github.com/hi-our/hi-face">https://github.com/hi-our/hi-face</a></p>
+<h2><a class="anchor" aria-hidden="true" id="文章标题"></a><a href="#文章标题" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>文章标题</h2>
+<h3><a class="anchor" aria-hidden="true" id="多种云开发扩展能力，让人脸识别飞起来-图像处理篇"></a><a href="#多种云开发扩展能力，让人脸识别飞起来-图像处理篇" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>多种云开发扩展能力，让人脸识别飞起来-图像处理篇</code></h3>
+<p>人脸识别、多图裁剪</p>
+<h3><a class="anchor" aria-hidden="true" id="多种云开发扩展能力，让人脸识别飞起来-图像安全篇"></a><a href="#多种云开发扩展能力，让人脸识别飞起来-图像安全篇" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>多种云开发扩展能力，让人脸识别飞起来-图像安全篇</code></h3>
+<p>对比三种图像安全审核功能，突出<code>图像安全审核</code>扩展能力好</p>
+<h3><a class="anchor" aria-hidden="true" id="多种云开发扩展能力，让人脸识别飞起来-小创意篇"></a><a href="#多种云开发扩展能力，让人脸识别飞起来-小创意篇" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>多种云开发扩展能力，让人脸识别飞起来-小创意篇</code></h3>
+<p>图像主色调、人脸图片标签</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/tencent-cloud/tencent-minapp-to-web"><span class="arrow-prev">← </span><span>简单几步，让微信小程序变身 H5 网页</span></a><a class="docs-next button" href="/docs/tencent-cloud/picture-recognition-storage"><span>借助云存储，让大图识别转换真正加速</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#人脸识别">人脸识别</a><ul class="toc-headings"><li><a href="#图像缩放及裁剪">图像缩放及裁剪</a></li><li><a href="#人脸识别-1">人脸识别</a></li></ul></li><li><a href="#图像安全审核">图像安全审核</a><ul class="toc-headings"><li><a href="#使用方法">使用方法</a></li></ul></li><li><a href="#多图裁剪">多图裁剪</a></li><li><a href="#图片主色调">图片主色调</a></li><li><a href="#图像标签">图像标签</a></li><li><a href="#文章相关内容：">文章相关内容：</a></li><li><a href="#文章标题">文章标题</a><ul class="toc-headings"><li><a href="#多种云开发扩展能力，让人脸识别飞起来-图像处理篇"><code>多种云开发扩展能力，让人脸识别飞起来-图像处理篇</code></a></li><li><a href="#多种云开发扩展能力，让人脸识别飞起来-图像安全篇"><code>多种云开发扩展能力，让人脸识别飞起来-图像安全篇</code></a></li><li><a href="#多种云开发扩展能力，让人脸识别飞起来-小创意篇"><code>多种云开发扩展能力，让人脸识别飞起来-小创意篇</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="头像小册" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

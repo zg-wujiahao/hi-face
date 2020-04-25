@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>项目搭建-腾讯云环境配置及特色人工功能介绍 · 头像小册</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 更多人工智能的介绍，以及sdk的使用"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="项目搭建-腾讯云环境配置及特色人工功能介绍 · 头像小册"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hi-our.github.io/hi-face/"/><meta property="og:description" content="## 更多人工智能的介绍，以及sdk的使用"/><meta property="og:image" content="https://hi-our.github.io/hi-face/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hi-our.github.io/hi-face/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="头像小册"/><h2 class="headerTitleWithLogo">头像小册</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction" target="_self">小册</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>配置</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">介绍</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">开篇介绍</a></li><li class="navListItem"><a class="navItem" href="/docs/book-plan">产品需求设计、项目规划、UI设计的技巧</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">配置</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/config/taro-cloud-function">项目搭建-Taro小程序开启云开发模式</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/config/tencent-cloud-ai-face">项目搭建-腾讯云环境配置及特色人工功能介绍</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">小程序知识</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-image-cropper-share">图片裁剪、模糊、保存、分享的技巧</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-minapp-web">canvas在小程序与web端的不同</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/minapp-to-dark-mode">深色模式在Web端的适配技巧，附带小程序侧的思考</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">原生小程序实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-native/face-recognition">原生微信小程序实现人脸识别</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/sticker">原生微信小程序实现头像大头贴效果</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/wear-a-mask">原生小程序实现戴口罩或圣诞帽</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">腾讯云开发实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-speed-up-1-second">图片识别加速，从10秒变为1秒，是怎么做到的呢？</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-minapp-to-web">简单几步，让微信小程序变身 H5 网页</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/image-extension-introduction">多种云开发扩展能力，让人脸识别飞起来</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-recognition-storage">借助云存储，让大图识别转换真正加速</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/avatar-poster-share">海报分享页面的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/login-minapp-web">小程序与Web端的账户体系摸索</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/self-page-list">个人中心的制作，包含登录组件的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-image-services">腾讯云功能</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Taro实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/taro-next/taro-next-vs-core">小程序框架：Taro 2.0与Taro 3.0的核心分析</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">项目搭建-腾讯云环境配置及特色人工功能介绍</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="更多人工智能的介绍，以及sdk的使用"></a><a href="#更多人工智能的介绍，以及sdk的使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>更多人工智能的介绍，以及sdk的使用</h2>
+<p><img src="https://n1image.hjfile.cn/res7/2020/03/30/31bfe7a9d5019902cf28ae98bea5085c.png" alt="">
+腾讯云上除了有基本的域名、云服务器、云数据库以外，还有非常多的人工智能服务，这些服务都是有免费额度的，比如我所使用的人脸识别每个月就有10000次调用额度，还支持按量付费。关键是，这些功能都可以用 <code>tencentcloud-sdk-nodejs</code> 来直接调用。</p>
+<p>在 <a href="https://github.com/TencentCloud/tencentcloud-sdk-nodejs">tencentcloud-sdk-nodejs
+</a> 中给出了详细的使用方法，而我这里把我的配置思路来讲解一下，把其中的一些细节优化点给写出来。</p>
+<h2><a class="anchor" aria-hidden="true" id="功能开发"></a><a href="#功能开发" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>功能开发</h2>
+<p>环境配置步骤大致为</p>
+<ul>
+<li>申请安全凭证，即SecretID 和 SecretKey，<a href="https://console.cloud.tencent.com/cam/capi">链接</a></li>
+<li>将安全凭证放在<code>config.js</code>文件中</li>
+<li>在主要功能里面调用安全凭证，并按照 <code>tencentcloud-sdk-nodejs</code> 给出的示例代码来编写功能</li>
+</ul>
+<p><img src="https://n1image.hjfile.cn/res7/2020/03/30/17dd43c2d088bd79fafd159191f8266e.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="配置安全证书"></a><a href="#配置安全证书" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>配置安全证书</h3>
+<p>将关键性配置抽离出来，在<code>.gitignore</code>将该文件忽略</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// cloud/functions/analyze-face/config.js</span>
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">SecretId</span>: <span class="hljs-string">''</span>,
+  <span class="hljs-attr">SecretKey</span>: <span class="hljs-string">''</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="人脸五官分析"></a><a href="#人脸五官分析" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>人脸五官分析</h3>
+<p>将人脸五官分析的主要源码给简单分析一下</p>
+<blockquote>
+<p>对请求图片进行五官定位（也称人脸关键点定位），计算构成人脸轮廓的 90 个点，包括眉毛（左右各 8 点）、眼睛（左右各 8 点）、鼻子（13 点）、嘴巴（22 点）、脸型轮廓（21 点）、眼珠[或瞳孔]（2点）。</p>
+</blockquote>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// cloud/functions/analyze-face/index.js</span>
+<span class="hljs-keyword">const</span> tencentcloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">'tencentcloud-sdk-nodejs'</span>)
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./config'</span>)
+<span class="hljs-keyword">const</span> status = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./status'</span>)
+
+<span class="hljs-comment">// 腾讯云的 SecretId 和 SecretKey</span>
+<span class="hljs-keyword">let</span> secretId = config.SecretId || <span class="hljs-string">''</span>
+<span class="hljs-keyword">let</span> secretKey = config.SecretKey || <span class="hljs-string">''</span>
+
+
+<span class="hljs-keyword">const</span> IaIClient = tencentcloud.iai.v20180301.Client;
+<span class="hljs-keyword">const</span> models = tencentcloud.iai.v20180301.Models;
+
+<span class="hljs-keyword">const</span> Credential = tencentcloud.common.Credential;
+<span class="hljs-keyword">const</span> ClientProfile = tencentcloud.common.ClientProfile;
+<span class="hljs-keyword">const</span> HttpProfile = tencentcloud.common.HttpProfile;
+
+<span class="hljs-keyword">let</span> httpProfile = <span class="hljs-keyword">new</span> HttpProfile();
+<span class="hljs-comment">// 设置endpoint，对应的是具体产品所在的接口位置</span>
+httpProfile.endpoint = <span class="hljs-string">"iai.tencentcloudapi.com"</span>;
+<span class="hljs-keyword">let</span> clientProfile = <span class="hljs-keyword">new</span> ClientProfile();
+
+<span class="hljs-comment">/*
+推荐使用 V3 鉴权。当内容超过 1M 时，必须使用 V3 签名鉴权。https://cloud.tencent.com/document/product/1093/39964
+*/</span>
+clientProfile.signMethod = <span class="hljs-string">"TC3-HMAC-SHA256"</span>;
+clientProfile.httpProfile = httpProfile;
+
+<span class="hljs-comment">// 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey</span>
+<span class="hljs-keyword">let</span> cred = <span class="hljs-keyword">new</span> Credential(secretId, secretKey);
+
+<span class="hljs-comment">// 实例化要请求产品(以cvm为例)的client对象</span>
+<span class="hljs-keyword">let</span> client = <span class="hljs-keyword">new</span> IaIClient(cred, <span class="hljs-string">"ap-shanghai"</span>, clientProfile);
+
+
+<span class="hljs-keyword">const</span> analyzeFace = <span class="hljs-function">(<span class="hljs-params">Image</span>) =&gt;</span> {
+  <span class="hljs-keyword">let</span> faceReq = <span class="hljs-keyword">new</span> models.DetectFaceRequest()
+
+  <span class="hljs-keyword">let</span> query_string = <span class="hljs-built_in">JSON</span>.stringify({
+    Image
+  })
+  <span class="hljs-comment">// 传入json参数</span>
+  faceReq.from_json_string(query_string);
+
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    <span class="hljs-comment">// 通过client对象调用想要访问的接口，需要传入请求对象以及响应回调函数</span>
+    client.AnalyzeFace(faceReq, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error, response</span>) </span>{
+      <span class="hljs-comment">// 请求异常返回，打印异常信息</span>
+      <span class="hljs-keyword">if</span> (error) {
+        <span class="hljs-keyword">const</span> { code = <span class="hljs-string">''</span> } = error
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'code :'</span>, code);
+
+        resolve({
+          <span class="hljs-attr">data</span>: {},
+          <span class="hljs-attr">time</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+          <span class="hljs-attr">status</span>: <span class="hljs-number">-10086</span>,
+          <span class="hljs-comment">// 在 status 中将错误码中做一个中英文对应，以方便调用者查看</span>
+          <span class="hljs-attr">message</span>: <span class="hljs-string">'AnalyzeFace '</span>+ status.FACE_CODE[code] + Image || code || <span class="hljs-string">'图片解析失败'</span>
+        })
+        <span class="hljs-keyword">return</span>
+      }
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'AnalyzeFace response :'</span>, response)
+      <span class="hljs-comment">// 请求正常返回，打印response对象</span>
+      resolve({
+        <span class="hljs-attr">data</span>: response,
+        <span class="hljs-attr">time</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+        <span class="hljs-attr">status</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">message</span>: <span class="hljs-string">''</span>
+      })
+    })
+  });
+}
+
+<span class="hljs-built_in">module</span>.exports = {
+  analyzeFace
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="调用功能"></a><a href="#调用功能" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>调用功能</h3>
+<p>云函数主入口，调用<code>analyzeFace</code>功能</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// cloud/functions/analyze-face/index.js</span>
+<span class="hljs-keyword">const</span> reqFace = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./req-iai-face'</span>).analyzeFace
+
+
+exports.main = <span class="hljs-keyword">async</span> (event) =&gt; {
+  <span class="hljs-keyword">const</span> { fileID = <span class="hljs-string">''</span>, base64Main = <span class="hljs-string">''</span> } = event
+
+  <span class="hljs-keyword">return</span> analyzeFace(base64Main)
+}
+
+</code></pre>
+<blockquote>
+<p>其实，在小程序审核时，图片上传或分析时，都是要求鉴别黄暴类的，所以，我这里还尝试使用了微信小程序开放能力的的<code>imgSecCheck</code>来完整这个目标，但发现所支持的图片体积大约为100Kb（官方标注500Kb），后来又换用了腾讯云所提供的类似功能。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="腾讯云人工智能的特色功能"></a><a href="#腾讯云人工智能的特色功能" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>腾讯云人工智能的特色功能</h2>
+<h3><a class="anchor" aria-hidden="true" id="腾讯云五官识别"></a><a href="#腾讯云五官识别" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>腾讯云五官识别</h3>
+<p>体验网址：<a href="https://ai.qq.com/product/face.shtml#shape">https://ai.qq.com/product/face.shtml#shape</a></p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/03/30/471e65f3ce53f97cd62ca6dea599a626.png" alt=""></p>
+<p>其实，启发我做这个小程序的是这两个文章，《<a href="https://juejin.im/post/5e02b73fe51d455807699b1f" title="「圣诞特辑」纯前端实现人脸识别自动佩戴圣诞帽">「圣诞特辑」纯前端实现人脸识别自动佩戴圣诞帽</a>》和《<a href="https://www.appinn.com/woyaodaikouzhao-wechat-miniapp/" title="我要戴口罩 – 为微信、微博等社交网络头像戴口罩">我要戴口罩 – 为微信、微博等社交网络头像戴口罩</a>》。</p>
+<p>因为新冠病毒疫情蔓延，而戴口罩就是一个必备的预防措施啦。那怎样才能创新呢，我在使用“我要戴口罩”小程序过程中发现，口罩的位置是手动移动的，我就想如何自动戴过去呢，正好先前看到的“自动识别戴圣诞帽”，那我来一个戴口罩就好了。</p>
+<p>在“自动佩戴圣诞帽”中，使用的方案是纯前端的 face-api，想放到小程序中就会有如下几个小问题：</p>
+<ul>
+<li>face-api 的识别模型有 5M 大小还多，即使纯前端加载，也显得比较大。而小程序的 canvas 与 web 网页中的还是有差异的，没法直接用 face-api。</li>
+<li>face-api 放在 nodejs 上加载，还需要配合<code>tensorflow</code>和<code>canvas</code>模拟。实际实现后发现，图片识别过程还是比较慢的（图片上传后、获取图片内容、识别五官位置、返回五官数据），容易让接口请求发生超时的情况。</li>
+</ul>
+<p>在使用腾讯云的过程中，我就发现，腾讯云的人工智能大类目下居然有人脸识别功能，细致推究发现里面有“<a href="https://cloud.tencent.com/document/api/867/32779" title="五官分析">五官分析</a>”，其返回的数据跟<code>face-api</code>返回的数据格式还是非常像的，“人脸识别”的每月免费额度 10000 次，当时就让我开心了一大把。</p>
+<p>当然，使用过程中非常大的坑就是，我的实现过程是需要上传 1M 以上大小的图片，而“五官分析”签名方法需要<code>TC3-HMAC-SHA256</code>，官方提供 npm 版本<code>tencentcloud-sdk-nodejs</code>是不支持这个签名方法的，需要从<a href="https://github.com/TencentCloud/tencentcloud-sdk-nodejs/tree/signature3" title="官方 GitHub">官方 GitHub</a>库的<code>signature3</code>分支上下载对应的代码。</p>
+<h3><a class="anchor" aria-hidden="true" id="人脸识别"></a><a href="#人脸识别" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>人脸识别</h3>
+<p>体验网址：<a href="https://ai.qq.com/product/face.shtml#detect">https://ai.qq.com/product/face.shtml#detect</a></p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/03/30/eb73939375831ee4100d9d7e0c314dc6.png" alt=""></p>
+<blockquote>
+<p>检测给定图片中的人脸（Face）的位置、相应的面部属性和人脸质量信息，位置包括 (x，y，w，h)，面部属性包括性别（gender）、年龄（age）、表情（expression）、魅力（beauty）、眼镜（glass）、发型（hair）、口罩（mask）和姿态 (pitch，roll，yaw)，人脸质量信息包括整体质量分（score）、模糊分（sharpness）、光照分（brightness）和五官遮挡分（completeness）。</p>
+</blockquote>
+<p>简单来说就是识别出人脸主要位置，以及给出相应的测评分数。</p>
+<h3><a class="anchor" aria-hidden="true" id="更多特色功能及对应链接"></a><a href="#更多特色功能及对应链接" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>更多特色功能及对应链接</h3>
+<ul>
+<li><code>人像变换</code>，包含年龄、性别 <a href="https://cloud.tencent.com/product/ft">https://cloud.tencent.com/product/ft</a></li>
+<li><code>人脸美妆</code>，比<code>智能美颜</code>更容易一些 <a href="https://ai.qq.com/product/facemakeup.shtml">https://ai.qq.com/product/facemakeup.shtml</a></li>
+<li><code>滤镜</code>效果很不错 <a href="https://ai.qq.com/product/imgfilter.shtml">https://ai.qq.com/product/imgfilter.shtml</a></li>
+<li><code>大头贴</code> <a href="https://ai.qq.com/product/sticker.shtml">https://ai.qq.com/product/sticker.shtml</a></li>
+<li>QQ AI的SDK
+<ul>
+<li><a href="https://www.npmjs.com/package/tencent-ai-nodejs-sdk">https://www.npmjs.com/package/tencent-ai-nodejs-sdk</a></li>
+<li><a href="https://github.com/w89612b/qqai-api-sdk">https://github.com/w89612b/qqai-api-sdk</a></li>
+</ul></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/config/taro-cloud-function"><span class="arrow-prev">← </span><span>项目搭建-Taro小程序开启云开发模式</span></a><a class="docs-next button" href="/docs/minapp-knowledge/canvas-image-cropper-share"><span>图片裁剪、模糊、保存、分享的技巧</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#更多人工智能的介绍，以及sdk的使用">更多人工智能的介绍，以及sdk的使用</a></li><li><a href="#功能开发">功能开发</a><ul class="toc-headings"><li><a href="#配置安全证书">配置安全证书</a></li><li><a href="#人脸五官分析">人脸五官分析</a></li><li><a href="#调用功能">调用功能</a></li></ul></li><li><a href="#腾讯云人工智能的特色功能">腾讯云人工智能的特色功能</a><ul class="toc-headings"><li><a href="#腾讯云五官识别">腾讯云五官识别</a></li><li><a href="#人脸识别">人脸识别</a></li><li><a href="#更多特色功能及对应链接">更多特色功能及对应链接</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="头像小册" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>项目搭建-Taro小程序开启云开发模式 · 头像小册</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 本文阅读步骤"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="项目搭建-Taro小程序开启云开发模式 · 头像小册"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hi-our.github.io/hi-face/"/><meta property="og:description" content="## 本文阅读步骤"/><meta property="og:image" content="https://hi-our.github.io/hi-face/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hi-our.github.io/hi-face/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="头像小册"/><h2 class="headerTitleWithLogo">头像小册</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction" target="_self">小册</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>配置</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">介绍</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">开篇介绍</a></li><li class="navListItem"><a class="navItem" href="/docs/book-plan">产品需求设计、项目规划、UI设计的技巧</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">配置</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/config/taro-cloud-function">项目搭建-Taro小程序开启云开发模式</a></li><li class="navListItem"><a class="navItem" href="/docs/config/tencent-cloud-ai-face">项目搭建-腾讯云环境配置及特色人工功能介绍</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">小程序知识</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-image-cropper-share">图片裁剪、模糊、保存、分享的技巧</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-minapp-web">canvas在小程序与web端的不同</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/minapp-to-dark-mode">深色模式在Web端的适配技巧，附带小程序侧的思考</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">原生小程序实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-native/face-recognition">原生微信小程序实现人脸识别</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/sticker">原生微信小程序实现头像大头贴效果</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/wear-a-mask">原生小程序实现戴口罩或圣诞帽</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">腾讯云开发实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-speed-up-1-second">图片识别加速，从10秒变为1秒，是怎么做到的呢？</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-minapp-to-web">简单几步，让微信小程序变身 H5 网页</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/image-extension-introduction">多种云开发扩展能力，让人脸识别飞起来</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-recognition-storage">借助云存储，让大图识别转换真正加速</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/avatar-poster-share">海报分享页面的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/login-minapp-web">小程序与Web端的账户体系摸索</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/self-page-list">个人中心的制作，包含登录组件的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-image-services">腾讯云功能</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Taro实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/taro-next/taro-next-vs-core">小程序框架：Taro 2.0与Taro 3.0的核心分析</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">项目搭建-Taro小程序开启云开发模式</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="本文阅读步骤"></a><a href="#本文阅读步骤" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>本文阅读步骤</h2>
+<ul>
+<li>了解Taro、小程序云开发、腾讯云环境配置等基本概念</li>
+<li>小程序配置<code>project.config.json</code>从普通模式切换成云开发模式</li>
+<li>小程序启动时，设置云开发所需环境</li>
+<li>在云函数中，可以灵活地调用腾讯云的服务，在下一篇文章中作具体介绍</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="概念解析"></a><a href="#概念解析" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>概念解析</h2>
+<h3><a class="anchor" aria-hidden="true" id="小程序云开发"></a><a href="#小程序云开发" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>小程序云开发</h3>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html">官方文档</a></p>
+<p>开发者可以使用云开发开发微信小程序、小游戏，无需搭建服务器，即可使用云端能力。
+云开发为开发者提供完整的原生云端支持和微信服务支持，弱化后端和运维概念，无需搭建服务器，使用平台提供的 API 进行核心业务开发，即可实现快速上线和迭代，同时这一能力，同开发者已经使用的云服务相互兼容，并不互斥。</p>
+<h3><a class="anchor" aria-hidden="true" id="taro-多端统一开发解决方案"></a><a href="#taro-多端统一开发解决方案" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Taro 多端统一开发解决方案</h3>
+<p><a href="https://taro-docs.jd.com/taro/docs/README.html">官方文档</a></p>
+<p>Taro 是一套遵循 <code>React</code> 语法规范的 <strong>多端开发</strong> 解决方案。使用 Taro，我们可以只书写一套代码，再通过 Taro 的编译工具，将源代码分别编译出可以在不同端（微信/百度/支付宝/字节跳动/QQ/京东小程序、快应用、H5、React-Native 等）运行的代码。</p>
+<h3><a class="anchor" aria-hidden="true" id="腾讯云人脸识别简介"></a><a href="#腾讯云人脸识别简介" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>腾讯云人脸识别简介</h3>
+<p><a href="https://cloud.tencent.com/product/facerecognition">官方文档</a></p>
+<p>腾讯云神图·人脸识别（Face Recognition）基于腾讯优图强大的面部分析技术，提供包括人脸检测与分析、五官定位、人脸搜索、人脸比对、人脸验证、人员查重、活体检测等多种功能，为开发者和企业提供高性能高可用的人脸识别服务。 可应用于智慧零售、智慧社区、在线娱乐、智慧楼宇、在线身份认证等多种应用场景，充分满足各行业客户的人脸属性识别及用户身份确认等需求。</p>
+<h2><a class="anchor" aria-hidden="true" id="小程序项目配置-projectconfigjson"></a><a href="#小程序项目配置-projectconfigjson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>小程序项目配置 project.config.json</h2>
+<h3><a class="anchor" aria-hidden="true" id="普通模式"></a><a href="#普通模式" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>普通模式</h3>
+<ul>
+<li><code>miniprogramRoot</code> 是小程序代码目录，此处写的是Taro编译后的dist目录</li>
+<li><code>appid</code> 微信小程序的appid</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"miniprogramRoot"</span>: <span class="hljs-string">"taro/dist/"</span>,
+  <span class="hljs-attr">"appid"</span>: <span class="hljs-string">"testappid"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="云开发模式"></a><a href="#云开发模式" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>云开发模式</h3>
+<p><strong>开通云环境</strong></p>
+<ul>
+<li>在微信开发者工具控制台上，点击“云开发”按钮，就可以新家云开发环境。最多支持两个</li>
+<li>建好之后，就可以看到你的云环境的名称，如下图</li>
+</ul>
+<p><img src="https://n1image.hjfile.cn/res7/2020/03/29/97f0a08f4779c07add38f10fb7c4f526.png" alt=""></p>
+<p><strong>云环境配置说明</strong></p>
+<ul>
+<li><code>cloudfunctionRoot</code> 云开发的云函数所在的目录</li>
+<li><code>cloudfunctionTemplateRoot</code>云开发的云函数测试数据模板所在的目录</li>
+<li><code>qqappid</code> QQ小程序的appid。即腾讯云云开发目标支持跨端使用</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"miniprogramRoot"</span>: <span class="hljs-string">"taro/dist/"</span>,
+  <span class="hljs-attr">"cloudfunctionRoot"</span>: <span class="hljs-string">"cloud/functions/"</span>,
+  <span class="hljs-attr">"cloudfunctionTemplateRoot"</span>: <span class="hljs-string">"cloud/template/"</span>,
+  <span class="hljs-attr">"appid"</span>: <span class="hljs-string">"testappid"</span>,
+  <span class="hljs-attr">"qqappid"</span>: <span class="hljs-string">"testqqappid"</span>
+}
+</code></pre>
+<p>这里我用的是Taro跨端框架，可以使用其<code>taro-cli</code>中的云开发模板来初始化一个新的小程序项目，观察里面的文件目录设置来以作为参考。</p>
+<h2><a class="anchor" aria-hidden="true" id="云开发模式配置及使用"></a><a href="#云开发模式配置及使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>云开发模式配置及使用</h2>
+<ol>
+<li>小程序启动时，初始化云环境</li>
+<li>在需要调用云函数或云存储的地方，调用对应的<code>callFunction</code>等方法即可</li>
+</ol>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// taro/src/pages/app.js</span>
+Taro.cloud.init({
+  <span class="hljs-attr">env</span>: <span class="hljs-string">'name-id'</span> <span class="hljs-comment">// 云开发环境名</span>
+})
+
+<span class="hljs-comment">// taro/src/pages/wear-a-mask/wear-a-mask.js</span>
+Taro.cloud.callFunction({
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'analyze-face'</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">fileID</span>: <span class="hljs-string">'12345'</span>
+  }
+}).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(res))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="常见问题"></a><a href="#常见问题" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>常见问题</h2>
+<p><strong>接口请求体太大，还未接收到请求结果，云函数就返回失败？</strong></p>
+<p>将接口请求的返回数据调大一些，如20秒</p>
+<pre><code class="hljs css language-json">"networkTimeout": {
+  "request": 20000,
+  "downloadFile": 10000
+}
+</code></pre>
+<p><strong>微信开发者工具上使用云函数本地调试的时候，函数还未发出就报错，并且返回的<code>result</code>为<code>null</code></strong></p>
+<p>我在做“人脸五官分析”功能的时候，曾经调用了约 1Mb 大小的 base64 图片数据，就遇到了这个问题。后来努力将 base64 图片数据降为 150Kb（在图片识别加速的文章中有讲解），或者将这个图片先上传到云存储上，再在云函数环境中再下来下来，这样也达到多次调用，减少网络间数据传递体积。</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/book-plan"><span class="arrow-prev">← </span><span>产品需求设计、项目规划、UI设计的技巧</span></a><a class="docs-next button" href="/docs/config/tencent-cloud-ai-face"><span>项目搭建-腾讯云环境配置及特色人工功能介绍</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#本文阅读步骤">本文阅读步骤</a></li><li><a href="#概念解析">概念解析</a><ul class="toc-headings"><li><a href="#小程序云开发">小程序云开发</a></li><li><a href="#taro-多端统一开发解决方案">Taro 多端统一开发解决方案</a></li><li><a href="#腾讯云人脸识别简介">腾讯云人脸识别简介</a></li></ul></li><li><a href="#小程序项目配置-projectconfigjson">小程序项目配置 project.config.json</a><ul class="toc-headings"><li><a href="#普通模式">普通模式</a></li><li><a href="#云开发模式">云开发模式</a></li></ul></li><li><a href="#云开发模式配置及使用">云开发模式配置及使用</a></li><li><a href="#常见问题">常见问题</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="头像小册" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

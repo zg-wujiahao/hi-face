@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>深色模式在Web端的适配技巧，附带小程序侧的思考 · 头像小册</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="最近，深色模式与浅色模式相当火，微信 App 增加了深色模式后，各大 App 都在跟进中。而我早在 19 年 8 月底就开始做深色模式的页面了。当时是 CCtalk 的视频播放页面。"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="深色模式在Web端的适配技巧，附带小程序侧的思考 · 头像小册"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hi-our.github.io/hi-face/"/><meta property="og:description" content="最近，深色模式与浅色模式相当火，微信 App 增加了深色模式后，各大 App 都在跟进中。而我早在 19 年 8 月底就开始做深色模式的页面了。当时是 CCtalk 的视频播放页面。"/><meta property="og:image" content="https://hi-our.github.io/hi-face/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hi-our.github.io/hi-face/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="头像小册"/><h2 class="headerTitleWithLogo">头像小册</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction" target="_self">小册</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>小程序知识</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">介绍</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">开篇介绍</a></li><li class="navListItem"><a class="navItem" href="/docs/book-plan">产品需求设计、项目规划、UI设计的技巧</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">配置</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/config/taro-cloud-function">项目搭建-Taro小程序开启云开发模式</a></li><li class="navListItem"><a class="navItem" href="/docs/config/tencent-cloud-ai-face">项目搭建-腾讯云环境配置及特色人工功能介绍</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">小程序知识</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-image-cropper-share">图片裁剪、模糊、保存、分享的技巧</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-knowledge/canvas-minapp-web">canvas在小程序与web端的不同</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/minapp-knowledge/minapp-to-dark-mode">深色模式在Web端的适配技巧，附带小程序侧的思考</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">原生小程序实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/minapp-native/face-recognition">原生微信小程序实现人脸识别</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/sticker">原生微信小程序实现头像大头贴效果</a></li><li class="navListItem"><a class="navItem" href="/docs/minapp-native/wear-a-mask">原生小程序实现戴口罩或圣诞帽</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">腾讯云开发实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-speed-up-1-second">图片识别加速，从10秒变为1秒，是怎么做到的呢？</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-minapp-to-web">简单几步，让微信小程序变身 H5 网页</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/image-extension-introduction">多种云开发扩展能力，让人脸识别飞起来</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/picture-recognition-storage">借助云存储，让大图识别转换真正加速</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/avatar-poster-share">海报分享页面的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/login-minapp-web">小程序与Web端的账户体系摸索</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/self-page-list">个人中心的制作，包含登录组件的小程序和web端</a></li><li class="navListItem"><a class="navItem" href="/docs/tencent-cloud/tencent-image-services">腾讯云功能</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Taro实战</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/taro-next/taro-next-vs-core">小程序框架：Taro 2.0与Taro 3.0的核心分析</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">深色模式在Web端的适配技巧，附带小程序侧的思考</h1></header><article><div><span><p>最近，深色模式与浅色模式相当火，微信 App 增加了深色模式后，各大 App 都在跟进中。而我早在 19 年 8 月底就开始做深色模式的页面了。当时是 CCtalk 的视频播放页面。</p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/04/784c03e42122586c3552b259368c1aa3.png" alt=""></p>
+<p>当时首要问题就是想，深色、浅色模式在前端中的表现是什么呢？</p>
+<h2><a class="anchor" aria-hidden="true" id="色值"></a><a href="#色值" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>色值</h2>
+<p>在《<a href="https://36kr.com/p/5231320">紧跟潮流学设计：深色模式设计的 8 个小技巧</a>》中详细阐述了颜色设置上的技巧。</p>
+<p>比如在 CCtalk 这边的浅色模式与深色模式的文字颜色</p>
+<table>
+<thead>
+<tr><th style="text-align:center">级别</th><th style="text-align:center">浅色模式</th><th style="text-align:center">深色模式</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">重要文字</td><td style="text-align:center">#2f3742</td><td style="text-align:center">rgba(255, 255, 255, 1)</td></tr>
+<tr><td style="text-align:center">普通文字</td><td style="text-align:center">#687583</td><td style="text-align:center">rgba(255, 255, 255, 0.8)</td></tr>
+<tr><td style="text-align:center">辅助文字</td><td style="text-align:center">#95a1af</td><td style="text-align:center">rgba(255, 255, 255, 0.6)</td></tr>
+</tbody>
+</table>
+<p><strong>为何什么深色模式下使用透明颜色?</strong>
+因为深色模式下的背景色不一定为特定的颜色，而文字使用透明颜色，背景色就会透过文字透明来渗出来，效果会更好。</p>
+<p><strong>为何不直接使用<code>opacity</code>，这样更加直接</strong>
+因为文字 RGBA 颜色，不会对元素造成影响。而<code>opacity</code>是改变整个元素的透明度，会将整个元素的所有属性都造成影响，比如 <code>color</code> 、 <code>background</code>。</p>
+<pre><code class="hljs css language-css"><span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.8</span>);
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#325ef6</span>;
+}
+
+<span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#325ef6</span>;
+}
+</code></pre>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/05/6d40e1a279d9766c2d6bc0f702a02f9d.png" alt=""></p>
+<pre><code class="hljs css language-css">{
+  <span class="hljs-comment">/* 属性分开设置 */</span>
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">0.6</span>);
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.12</span>);
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="css-设置方法"></a><a href="#css-设置方法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS 设置方法</h2>
+<p>深色、浅色模式有两种方向来考虑：</p>
+<ul>
+<li><strong>主题色</strong>，即定义<code>theme-dark</code>与<code>theme-light</code>两套主题</li>
+<li><strong>全局统一色彩定义</strong>，就是一种颜色修改后，全局全部变化，比如蓝色主题下链接颜色为<code>#325ef6</code>，而粉红色主题下链接为<code>#ff3271</code>，最好能统一定义。</li>
+</ul>
+<p>常规的方案是用 <a href="https://www.cnblogs.com/jianxian/p/11084305.html">BEM 命名规范</a> + <code>wrapper class</code>的方式。</p>
+<pre><code class="hljs css language-css"><span class="hljs-selector-class">.theme-blue</span> <span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#325ef6</span>;
+}
+
+<span class="hljs-selector-class">.theme-pink</span> <span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ff3271</span>;
+}
+</code></pre>
+<p>那如果一个页面有几十个 button，那这个颜色是不是要写几十遍呢？当然不是。</p>
+<p>这里有这几种方案：</p>
+<ul>
+<li>使用 CSS 预处理器</li>
+<li>使用 CSS 变量</li>
+<li>使用媒体查询 <code>@media(prefers-color-scheme: dark)</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="css-预处理器"></a><a href="#css-预处理器" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS 预处理器</h3>
+<p>使用 <code>Less</code>、<code>Scss</code>、<code>Stylus</code> 等 CSS 预处理器，可以快速实现定制主题色的方案。这里以 <code>Stylus</code> 为例。</p>
+<blockquote>
+<p>Stylus：富于表现力、健壮、功能丰富的 CSS 预处理器</p>
+</blockquote>
+<pre><code class="hljs css language-stylus"><span class="hljs-comment">// 第一种写法</span>
+<span class="hljs-selector-class">.theme-blue</span>
+  <span class="hljs-variable">$button</span>-<span class="hljs-attribute">color</span>=<span class="hljs-number">#325ef6</span>
+
+  <span class="hljs-selector-class">.button</span>
+    <span class="hljs-attribute">color</span> <span class="hljs-variable">$button</span>-color
+
+<span class="hljs-selector-class">.theme-pink</span>
+  <span class="hljs-variable">$button</span>-<span class="hljs-attribute">color</span>=<span class="hljs-number">#ff3271</span>
+
+  <span class="hljs-selector-class">.button</span>
+    <span class="hljs-attribute">color</span> <span class="hljs-variable">$button</span>-color
+</code></pre>
+<pre><code class="hljs css language-stylus"><span class="hljs-comment">// 第二种写法</span>
+<span class="hljs-comment">// const-blue.styl</span>
+<span class="hljs-variable">$button</span>-<span class="hljs-attribute">color</span>=<span class="hljs-number">#325ef6</span>
+
+<span class="hljs-comment">// theme-blue.styl</span>
+@import <span class="hljs-string">"../../const-blue.styl"</span>
+<span class="hljs-selector-class">.button</span>
+  <span class="hljs-attribute">color</span> <span class="hljs-variable">$button</span>-color
+
+<span class="hljs-comment">// const-pink.styl</span>
+<span class="hljs-variable">$button</span>-<span class="hljs-attribute">color</span>=<span class="hljs-number">#ff3271</span>
+
+<span class="hljs-comment">// theme-pink.styl</span>
+@import <span class="hljs-string">"../../const-pink.styl"</span>
+<span class="hljs-selector-class">.button</span>
+  <span class="hljs-attribute">color</span> <span class="hljs-variable">$button</span>-color
+</code></pre>
+<p>也就是说，CSS 预处器在预先定义好颜色变量后，后续可以随意引用。当然，这里更加可以定义更多的功能，比如公共函数等。</p>
+<p>使用了 CSS 预处理器的典型框架就是<code>BootStrap</code>，定制网址为：<a href="https://v3.bootcss.com/customize/">https://v3.bootcss.com/customize/</a></p>
+<p><code>Ant Design</code>已支持暗黑主题的定制，其配置方案与 <code>Bootstrap</code> 类似。<a href="https://ant.design/docs/react/customize-theme-cn">https://ant.design/docs/react/customize-theme-cn</a></p>
+<blockquote>
+<p><strong>Ant Design of React</strong> 是基于 Ant Design 设计体系的 React UI 组件库，主要用于研发企业级中后台产品。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="css-变量"></a><a href="#css-变量" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS 变量</h3>
+<p>那么，在不借助 CSS 预处理器的情况下，有没有原生的方法呢？答案就是 CSS 变量。</p>
+<blockquote>
+<p>自定义属性（有时候也被称作 CSS 变量或者级联变量）是由 CSS 作者定义，它包含的值可以在整个文档中重复使用。由自定义属性标记设定值（比如： <code>**--main-color: black;**</code>），由 var() 函数来获取值（比如： <code>color: var(--main-color)</code>;）
+复杂的网站都会有大量的 CSS 代码，通常也会有许多重复的值。举个例子，同样一个颜色值可能在成千上百个地方被使用到，如果这个值发生了变化，需要全局搜索并且一个一个替换（很麻烦哎～）。自定义属性在某个地方存储一个值，然后在其他许多地方引用它。另一个好处是语义化的标识。比如，<code>--main-text-color</code> 会比 <code>#00ff00</code> 更易理解，尤其是这个颜色值在其他上下文中也被使用到。<br>
+自定义属性受级联的约束，并从其父级继承其值。</p>
+</blockquote>
+<p>声明一个自定义属性：</p>
+<pre><code class="hljs css language-css"><span class="hljs-selector-class">.element</span> {
+  <span class="hljs-attribute">--main-bg-color</span>: brown;
+}
+</code></pre>
+<p>使用一个局部变量：</p>
+<pre><code class="hljs css language-css"><span class="hljs-selector-class">.element</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--main-bg-color);
+}
+</code></pre>
+<p>使用 CSS 变量的好处是动态改变。当元素被被优先级更高的 CSS 选择器定义时，就会被这上面的 CSS 变量所影响。</p>
+<pre><code class="hljs css language-css"><span class="hljs-selector-class">.parent</span> <span class="hljs-selector-class">.element</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--main-bg-color);
+}
+</code></pre>
+<p>那么，CSS 兼容性如何呢？可以看张鑫旭早在 2016 年写的文章《<a href="https://www.zhangxinxu.com/wordpress/2016/11/css-css3-variables-var/">小 tips:了解 CSS 变量 var</a>》。</p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/04/8f538a4b0a343d46e7a9992e0f717d58.png" alt="">
+也就是说，IE11 不支持。当然也有简单的 hack 的方式，但其实也挺麻烦的。就目前国内 Windows 7 系统占有比例还这么高的情况下，使用 CSS 变量的成本还是挺高的。</p>
+<p>使用 CSS 变量的网站为苹果官网。
+<img src="https://n1image.hjfile.cn/res7/2020/04/04/9fe803a21031baf6493cc70ee8797309.png" alt="">，其方案包含：</p>
+<ul>
+<li><code>.theme-dark</code>标注深色模式</li>
+<li>CSS 变量快速定义全局样式和模块样式</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="使用媒体查询-mediaprefers-color-scheme-dark"></a><a href="#使用媒体查询-mediaprefers-color-scheme-dark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用媒体查询 <code>@media(prefers-color-scheme: dark)</code></h3>
+<p>在《<a href="https://juejin.im/post/5dfb178f6fb9a0165f48fd18">H5 适配暗黑主题（DarkMode）全部解法</a>》中简明扼要地讲解了使用媒体查询来完成适配深色模式的方案。</p>
+<p>这里摘一点内容过来，</p>
+<pre><code class="hljs css language-css"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#f2f2f2</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+}
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">prefers-color-scheme:</span> dark) {
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#222</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#eee</span>;
+  }
+}
+</code></pre>
+<p>这个方案在我们日常看的微信公众号文章已经得到了应用，其主要分这几个方面：</p>
+<ol>
+<li>位于 body 上的 CSS 变量声明全局样式</li>
+<li>使用<code>@media(prefers-color-scheme: dark)</code>来设置深色模式</li>
+<li>在 APP 的 <code>WebView</code> 中，使用<code>window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;).matches</code>来判断设备启动了深色模式后，设置导航栏颜色<code>setNavigationBarColor</code>。</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="自动取色技巧"></a><a href="#自动取色技巧" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>自动取色技巧</h2>
+<h3><a class="anchor" aria-hidden="true" id="图片主体色彩"></a><a href="#图片主体色彩" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图片主体色彩</h3>
+<p><strong>方法一：通过图片存储商提供的方法来取色</strong></p>
+<ul>
+<li>优点：速度快，性能好</li>
+<li>缺点：图片存储上得提供这个方法才行</li>
+</ul>
+<p>腾讯云数据万象通过 <code>imageAve</code> 接口获取图片主色调信息。目前支持大小在 20M 以内、长宽小于 9999 像素的图片处理。</p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/04/269e02acf1314ea62737e069d932e72e.jpg" alt=""></p>
+<p>访问 <code>https://cc.hjfile.cn/cc/img/20200325/2020032503285796778812.png?imageAve</code>即可获得以下结果</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"RGB"</span>:<span class="hljs-string">"0xf68a61"</span>
+}
+</code></pre>
+<p>然后将 RGB 的颜色转换为 RGBA 的，这样的颜色略微浅一些。
+给页面大容器设置背景时，背景色（<code>background-color</code>）为取色结果，而用了一层<code>background-image</code>的渐变色来作为遮罩。</p>
+<pre><code class="hljs css language-css">{
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">155</span>, <span class="hljs-number">173</span>, <span class="hljs-number">185</span>, <span class="hljs-number">0.65</span>);
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">linear-gradient</span>(rgba(<span class="hljs-number">28</span>, <span class="hljs-number">37</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0.45</span>) <span class="hljs-number">0%</span>, <span class="hljs-built_in">rgba</span>(<span class="hljs-number">28</span>, <span class="hljs-number">37</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0.7</span>) <span class="hljs-number">30%</span>, <span class="hljs-built_in">rgba</span>(<span class="hljs-number">28</span>, <span class="hljs-number">37</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0.7</span>) <span class="hljs-number">100%</span>);
+}
+</code></pre>
+<blockquote>
+<p>这里也有一个小坑。<code>https://cc.hjfile.cn/cc/img/20200325/2020032503285796778812.png</code>这个地址正常为图片的地址，而如果当做接口来请求时，要保证网站与图片地址使用同样的<code>HTTPS</code>协议或<code>HTTP</code>协议。因为 HTTPS 是无法访问 HTTP 的接口的。</p>
+</blockquote>
+<p><strong>方法二：借助 canvas 来获取主要色</strong></p>
+<ul>
+<li>优点：不借助第三方服务</li>
+<li>缺点：页面上同时获取多个 canvas 的色彩，会导致页面直接卡住，影响了正常浏览</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="图片高斯模糊"></a><a href="#图片高斯模糊" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图片高斯模糊</h3>
+<p>除了使用取色方案外，我们也可以使用高斯模糊的方案，其原理是用了 CSS 滤镜。CSS 滤镜还支持灰度、亮度等变化。</p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/02/5d72b1a7c2de158c4638d7ece1c26549.png" alt=""></p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url(https://cc.hjfile.cn/cc/img/20180723/2018072309274407617842.jpg);"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mask"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="hljs css language-css"><span class="hljs-selector-class">.bg</span> {
+  <span class="hljs-attribute">background-repeat</span>: no-repeat;
+  <span class="hljs-attribute">background-position</span>: center;
+  <span class="hljs-attribute">background-size</span>: cover;
+  <span class="hljs-attribute">filter</span>: <span class="hljs-built_in">blur</span>(<span class="hljs-number">40px</span>);
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">200%</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200%</span>;
+}
+
+<span class="hljs-selector-class">.bg</span> <span class="hljs-selector-class">.mask</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,.<span class="hljs-number">35</span>);
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+</code></pre>
+<p>关于 CSS 滤镜，这里有两篇文章。</p>
+<ul>
+<li>MDN-<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter">filter</a></li>
+<li><a href="https://blog.csdn.net/Ruffaim/article/details/84430792">CSS3 filter(滤镜)属性及小程序 高斯模糊和 Web 的使用</a>中提及，CSS3 滤镜同样在小程序中也适用。</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="theme-dark在-react-css-module-中如何传递"></a><a href="#theme-dark在-react-css-module-中如何传递" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>.theme-dark</code>在 React CSS Module 中如何传递</h2>
+<p>在 React 的项目中启动了 CSS Module，每个组件内的 <code>className</code> 都变得独一无二了。我在尝试中有了以下几个传递的方案。</p>
+<ul>
+<li>设置 <code>:global</code> 来设置样式，但需要配合 <code>BEM</code> 命名规范，适合通用组件</li>
+<li>通过 <code>props</code> 和 <code>context</code> 来传递，适合模块组件</li>
+<li>通过 CSS 变量，因为不兼容 IE11，只能暂时放弃。</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="深色模式在-cctalk-的实际应用"></a><a href="#深色模式在-cctalk-的实际应用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>深色模式在 CCtalk 的实际应用</h2>
+<p>在实际应用中，我做了多端适配。其包含了在智能手机、平板电脑、笔记本电脑，在 CCtalk 还包含了位于笔记本电脑上的 PC 客户端上的 UI 适配。</p>
+<p><strong>智能手机：全屏深色模式</strong></p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/04/784c03e42122586c3552b259368c1aa3.png" alt=""></p>
+<p><strong>笔记本电脑：上深下浅</strong></p>
+<p><img src="https://n1image.hjfile.cn/res7/2020/04/04/6ac839a962c924e1d877d2b5305c0728.png" alt=""></p>
+<p><strong>PC 客户端：全屏浅色模式</strong>
+<img src="https://n1image.hjfile.cn/res7/2020/04/04/db170b0cd7ddc8a400558d0014ea311f.png" alt=""></p>
+<p>我想到了如下两个维度：</p>
+<ul>
+<li>模式：触屏 mobile（<code>.ui-mode-mobile</code>）、大屏 pc（<code>.ui-theme-pc</code>）</li>
+<li>主题色分布：全屏深色模式、全屏浅色模式、上深下浅（与各大视频网站播放页类似）</li>
+</ul>
+<p>而我在考虑的时候，将主要适配罗列了一下</p>
+<table>
+<thead>
+<tr><th style="text-align:left">设备</th><th style="text-align:center">网页宽高</th><th style="text-align:center">模式</th><th style="text-align:center">主题色</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">手机 iPhone11 pro max</td><td style="text-align:center">414x896</td><td style="text-align:center">mobile</td><td style="text-align:center">深色</td></tr>
+<tr><td style="text-align:left">iPad 7.9 寸</td><td style="text-align:center">1024x768</td><td style="text-align:center">mobile</td><td style="text-align:center">深色</td></tr>
+<tr><td style="text-align:left">iPad Pro 11 寸</td><td style="text-align:center">1194x834</td><td style="text-align:center">横屏 pc 竖屏 mobile</td><td style="text-align:center">横屏-上深下浅 竖屏-深色</td></tr>
+<tr><td style="text-align:left">iPad Pro 12.9 寸</td><td style="text-align:center">1366x1024</td><td style="text-align:center">横屏 pc 竖屏 mobile</td><td style="text-align:center">横屏-上深下浅 竖屏-深色</td></tr>
+<tr><td style="text-align:left">pc 客户端</td><td style="text-align:center">1070x650</td><td style="text-align:center">横屏 pc</td><td style="text-align:center">浅色</td></tr>
+<tr><td style="text-align:left">笔记本</td><td style="text-align:center">1280x800</td><td style="text-align:center">pc</td><td style="text-align:center">上深下浅</td></tr>
+</tbody>
+</table>
+<p>如果来做到区分 mobile 和 pc 呢，</p>
+<ol>
+<li>不支持 <code>onorientationchange</code> 横竖屏切换的，就认定为 pc，并且当浏览器拖动小了，支持左右滚动</li>
+<li>进入页面时，竖屏时以<code>window.innerWidth, window.innerHeight</code>中小的那个来判断，横屏中以<code>window.innerWidth, window.innerHeight</code>大的来判断，当宽度大于 <code>1040px</code> 时认为是<code>pc</code>，宽度小于 1040 时，认定为<code>mobile</code>。</li>
+<li>横竖屏切换时，重复第 2 步的判断</li>
+</ol>
+<blockquote>
+<p><code>window.innerWidth, window.innerHeight</code>在安卓和 ios 上的横竖屏切换上有不一致的地方，所以以最大值或最小值来做更准确。
+<code>1040px</code>的宽度设定的依据为，恰好在 1024~1080 之间，又能兼顾 PC 客户端<code>1070px</code>的宽度（两侧有留白）。</p>
+</blockquote>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>
+
+<span class="hljs-keyword">const</span> mqlMedia = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">'(orientation: portrait)'</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMatchMediaChange</span>(<span class="hljs-params">mql = window.matchMedia(<span class="hljs-string">'(orientation: portrait)'</span></span>)) </span>{
+  <span class="hljs-keyword">if</span> (mql.matches) {
+    <span class="hljs-comment">//竖屏</span>
+    <span class="hljs-comment">// console.log('此时竖屏')</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'portrait'</span>
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">//横屏</span>
+    <span class="hljs-comment">// console.log('此时横屏')</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'horizontal'</span>
+  }
+
+}
+<span class="hljs-comment">// 输出当前屏幕模式</span>
+<span class="hljs-keyword">const</span> getUiMode = <span class="hljs-function">(<span class="hljs-params">uiMode = <span class="hljs-string">''</span>, mql</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (uiMode) <span class="hljs-keyword">return</span> uiMode
+
+  <span class="hljs-keyword">if</span> (!(<span class="hljs-string">'onorientationchange'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>)) <span class="hljs-keyword">return</span> <span class="hljs-string">'pc'</span>
+
+  <span class="hljs-keyword">let</span> status = onMatchMediaChange(mql)
+  <span class="hljs-keyword">let</span> width = status === <span class="hljs-string">'portrait'</span> ? <span class="hljs-built_in">Math</span>.min(<span class="hljs-built_in">window</span>.innerWidth, <span class="hljs-built_in">window</span>.innerHeight) : <span class="hljs-built_in">Math</span>.max(<span class="hljs-built_in">window</span>.innerWidth, <span class="hljs-built_in">window</span>.innerHeight)
+
+  <span class="hljs-keyword">if</span> (width &gt; <span class="hljs-number">1040</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">'pc'</span>
+
+  <span class="hljs-keyword">return</span> <span class="hljs-string">'mobile'</span>
+
+}
+
+<span class="hljs-keyword">const</span> getIsPcMode = <span class="hljs-function">(<span class="hljs-params">uiMode</span>) =&gt;</span> uiMode === <span class="hljs-string">'pc'</span>
+
+<span class="hljs-comment">/**
+ * rem适配, 适用于移动端适配
+ * <span class="hljs-doctag">@export</span>
+ * <span class="hljs-doctag">@param <span class="hljs-type">{*}</span> <span class="hljs-variable">Cmp</span></span>
+ * <span class="hljs-doctag">@returns</span>
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">withUiMode</span>(<span class="hljs-params">Cmp, options = {}</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WithUIRem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    <span class="hljs-keyword">constructor</span>(props) {
+      <span class="hljs-keyword">super</span>(props)
+      <span class="hljs-keyword">let</span> uiMode = getUiMode()
+      <span class="hljs-keyword">let</span> isPCMode = getIsPcMode(uiMode)
+
+      <span class="hljs-keyword">this</span>.state = {
+        <span class="hljs-attr">uiMode</span>: uiMode,
+        <span class="hljs-attr">isPCMode</span>: isPCMode,
+      }
+    }
+
+    componentDidMount() {
+      mqlMedia.addListener(<span class="hljs-keyword">this</span>.changeUiMode)
+    }
+
+    componentWillUnmount() {
+      mqlMedia.removeListener(<span class="hljs-keyword">this</span>.changeUiMode)
+    }
+
+    changeUiMode = <span class="hljs-function">(<span class="hljs-params">mql</span>) =&gt;</span> {
+      <span class="hljs-keyword">let</span> newUiMode = getUiMode(<span class="hljs-string">''</span>, mql)
+      <span class="hljs-keyword">if</span> (newUiMode !== <span class="hljs-keyword">this</span>.state.uiMode) {
+        <span class="hljs-keyword">this</span>.setState({
+          <span class="hljs-attr">isPCMode</span>: getIsPcMode(newUiMode),
+          <span class="hljs-attr">uiMode</span>: newUiMode
+        })
+
+      }
+    }
+
+    render() {
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Cmp</span> {<span class="hljs-attr">...this.state</span>} {<span class="hljs-attr">...this.props</span>} /&gt;</span></span>
+    }
+  }
+}
+
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (options) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">Cmp</span>) =&gt;</span>  withUiMode(Cmp, options)
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="深色模式在cctalk-课程小程序中的实际运用"></a><a href="#深色模式在cctalk-课程小程序中的实际运用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>深色模式在“CCtalk 课程”小程序中的实际运用</h2>
+<p>抖音 APP 的主题色为暗黑色，“CCtalk 课堂”也使用了类似的暗黑色。</p>
+<blockquote>
+<p>安卓手机上搜“CCtalk 课堂”小程序才能搜到。</p>
+</blockquote>
+<pre><code class="hljs css language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Self</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Taro</span>.<span class="hljs-title">Component</span> </span>{
+  config = {
+    <span class="hljs-attr">navigationBarBackgroundColor</span>: <span class="hljs-string">'#0E1226'</span>,
+    <span class="hljs-attr">navigationBarTextStyle</span>: <span class="hljs-string">'white'</span>,
+    <span class="hljs-attr">navigationBarTitleText</span>: <span class="hljs-string">'我的课程'</span>,
+    <span class="hljs-attr">backgroundColorTop</span>: <span class="hljs-string">'#0E1226'</span>,
+    <span class="hljs-attr">backgroundColorBottom</span>: <span class="hljs-string">'#0E1226'</span>,
+    <span class="hljs-attr">backgroundTextStyle</span>: <span class="hljs-string">'light'</span>
+  }
+}
+</code></pre>
+<ul>
+<li><code>navigationBarBackgroundColor</code>，导航栏背景颜色</li>
+<li><code>navigationBarTextStyle</code>，导航栏标题颜色，仅支持 black/white，同时影响：标题颜色、右胶囊颜色、左返回箭头颜色</li>
+<li><code>backgroundColorTop</code>，顶部窗口的背景色，仅 iOS 支持</li>
+<li><code>backgroundColorBottom</code>，同<code>backgroundColor</code>底部窗口的背景色，仅 iOS 支持</li>
+<li><code>backgroundTextStyle</code>，下拉 loading 的样式，仅支持 dark/light</li>
+</ul>
+<p>并且，在《<a href="https://blog.csdn.net/Ruffaim/article/details/84430792">CSS3 filter(滤镜)属性及小程序 高斯模糊和 Web 的使用</a>》中提及，CSS3 滤镜同样在小程序中也适用</p>
+<h2><a class="anchor" aria-hidden="true" id="遗留问题"></a><a href="#遗留问题" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>遗留问题</h2>
+<p>文章结构重新调整
+1、小程序示例
+2、总分总的结构
+示例图片需要更换</p>
+<p>色值这里
+这里你想告诉人家两种不一样的
+所以其实人家更多想看结果而不是代码
+所以感觉你可以在右边放一个对比图</p>
+<p>深色、浅色模式有两种方向来考虑：===&gt;不太清晰</p>
+<p>几个问题，</p>
+<ol>
+<li>标题不恰当，包含的内容比较丰富，建议是一个“颜色”为主题取个名字，不一定是暗色，因为内容包含了取色、多种配色适配方案等</li>
+<li>使用高斯模糊滤镜，在ios上会导致卡顿等问题</li>
+<li>敏感信息，包括截图、图片服务商地址信息等，最好都虚化处理</li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/minapp-knowledge/canvas-minapp-web"><span class="arrow-prev">← </span><span>canvas在小程序与web端的不同</span></a><a class="docs-next button" href="/docs/minapp-native/face-recognition"><span>原生微信小程序实现人脸识别</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#色值">色值</a></li><li><a href="#css-设置方法">CSS 设置方法</a><ul class="toc-headings"><li><a href="#css-预处理器">CSS 预处理器</a></li><li><a href="#css-变量">CSS 变量</a></li><li><a href="#使用媒体查询-mediaprefers-color-scheme-dark">使用媒体查询 <code>@media(prefers-color-scheme: dark)</code></a></li></ul></li><li><a href="#自动取色技巧">自动取色技巧</a><ul class="toc-headings"><li><a href="#图片主体色彩">图片主体色彩</a></li><li><a href="#图片高斯模糊">图片高斯模糊</a></li></ul></li><li><a href="#theme-dark在-react-css-module-中如何传递"><code>.theme-dark</code>在 React CSS Module 中如何传递</a></li><li><a href="#深色模式在-cctalk-的实际应用">深色模式在 CCtalk 的实际应用</a></li><li><a href="#深色模式在cctalk-课程小程序中的实际运用">深色模式在“CCtalk 课程”小程序中的实际运用</a></li><li><a href="#遗留问题">遗留问题</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="头像小册" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>
