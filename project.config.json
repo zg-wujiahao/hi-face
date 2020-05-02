@@ -2,9 +2,9 @@
 	"miniprogramRoot": "taro/dist/",
 	"cloudfunctionRoot": "cloud/functions/",
 	"cloudfunctionTemplateRoot": "cloud/template/",
-	"projectname": "quickly-mask",
+	"projectname": "hi-face",
 	"description": "test",
-	"appid": "wxd5e8989ce23206af",
+	"appid": "wx8506da8232dd8e66",
 	"qqappid": "1110180763",
 	"setting": {
 		"urlCheck": false,
